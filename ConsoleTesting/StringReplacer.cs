@@ -13,7 +13,7 @@ namespace ConsoleTesting
     internal class StringReplacer
     {
         //Class1() { }
-        public static List<string> StripWhitespace(List<string> liststr)
+        public static List<string> StripWhitespace(IEnumerable<string> liststr)
         {
             var re = new Regex(@"\s+");
             var returnlist = from str in liststr select re.Replace(str, "");
